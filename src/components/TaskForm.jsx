@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/TaskForm_styles.css"
 
 export default function TaskForm({onAdd}) {
 
@@ -14,18 +14,19 @@ export default function TaskForm({onAdd}) {
 }
 
   return (
-  <form onSubmit={handleSubmit}>
+  <form onSubmit={handleSubmit} className="form">
     <input 
       id="taskInput" 
       type="text"
       value={value}
-      onChange={(e) => setValue(e.target.value)}>
+      onChange={(e) => setValue(e.target.value)}
+      className="input">
     </input>
 
     <button 
       id="addBtn"
-     // onClick={handleAdd}
-      type="submit">
+      type="submit"
+      className="button">
         Добавить
       </button>
   </form>

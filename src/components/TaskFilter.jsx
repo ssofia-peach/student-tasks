@@ -1,9 +1,10 @@
 import React from "react";
+import "../styles/TaskFilter_styles.css"
 
 export default function TaskFilter({checked, onChange}){
 
     return (
-        <label>
+        <label className="label">
             <input 
                 type='checkbox' 
                 checked={checked}

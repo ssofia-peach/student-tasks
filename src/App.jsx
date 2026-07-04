@@ -3,7 +3,7 @@ import TaskList from "./components/TaskList"
 import TaskForm from "./components/TaskForm"
 import TaskFilter from "./components/TaskFilter";
 import { loadTasks, saveTasks } from "./utils/storage";
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import useTasks from "./hooks/useTasks";
 
 export default function App() {

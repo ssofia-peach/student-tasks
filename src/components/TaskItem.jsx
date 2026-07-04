@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/TaskItem_styles.css"
 
 export default function TaskItem({task, onDelete, onToggle, onEdit}) {
 
@@ -22,7 +23,7 @@ function handleSave() {
         }
     }
     return (
-            <li>
+            <li className="task">
                 <input 
                     type="checkbox" 
                     checked={task.completed}

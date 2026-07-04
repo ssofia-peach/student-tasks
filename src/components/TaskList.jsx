@@ -1,4 +1,5 @@
 import TaskItem from './TaskItem'
+import "../styles/TaskList_styles.css"
 
 export default function TaskList({tasks, onDelete, onToggle, onEdit}) {
 
@@ -12,6 +13,6 @@ export default function TaskList({tasks, onDelete, onToggle, onEdit}) {
          />
       ))
     return(
-        <ul> {listItems} </ul>
+        <ul className='list'> {listItems} </ul>
     )
 }
