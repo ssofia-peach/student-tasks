@@ -13,12 +13,14 @@
 
     padding: 14px 18px;
 
-    border: 1px solid #f1dcdc;
+    border: 2px solid #3d3f4a;
+    color: #00120b;
     border-radius: 10px;
 
     background: white;
 
     font-size: 16px;
+    font-family: "Source Code Pro", sans-serif;
 
     outline: none;
 
@@ -26,7 +28,7 @@
 }
 
 .input:focus {
-    border-color: #193d3d;
+    border-color: #b2d5e5;
 }
 .button {
     padding: 10px 14px;
@@ -34,10 +36,11 @@
     border: none;
     border-radius: 8px;
 
-    background: #193d3d;
-    color: #c2d8c4;
+    background: #1a1d29;
+    color: #f8fafc;
 
     font-size: 16px;
+    font-family: "Source Code Pro", sans-serif;
 
     cursor: pointer;
 

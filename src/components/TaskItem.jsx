@@ -33,6 +33,9 @@ function handleSave() {
 
                 {isEditing? (
                     <input
+                        type="text"
+                        className="edit-input"
+                        autoFocus
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         onKeyDown={handleKeyDown}   
@@ -43,7 +46,7 @@ function handleSave() {
                     </span> 
                 )}
 
-                <button 
+                <button className="delete"
                     onClick={() => onDelete(task.id)}>
                         Удалить
                 </button>
