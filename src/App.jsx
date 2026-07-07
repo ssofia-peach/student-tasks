@@ -5,6 +5,8 @@ import TaskFilter from "./components/TaskFilter";
 import { loadTasks, saveTasks } from "./utils/storage";
 import Header from "./components/Header.jsx";
 import useTasks from "./hooks/useTasks";
+import ProgressBar from "./components/ProgressBar.jsx";
+import "./App.css"
 
 export default function App() {
 
@@ -22,8 +24,15 @@ export default function App() {
       ? tasks.filter(task => !task.completed)
       : tasks;
 
+  const completedTasks = tasks.filter(task => task.completed).length;
+
+  const progress =
+    tasks.length === 0
+      ? 0
+      : (completedTasks / tasks.length) * 100;
+
   return (
-    <>
+    <div className="app">
       <Header/>
 
       <TaskForm onAdd={addTask} />
@@ -37,6 +46,11 @@ export default function App() {
       <TaskFilter 
           checked={showOnlyActive} 
           onChange={setShowOnlyActive}/>
-    </>
+
+      <ProgressBar 
+        tasks={tasks}
+        progress={progress}
+        completedTasks={completedTasks}/>
+    </div>
   );
 }

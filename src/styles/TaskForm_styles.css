@@ -7,7 +7,6 @@
 }
 .input {
     flex: 1;
-
     display: flex;
     align-items: center;
 
@@ -23,7 +22,6 @@
     font-family: "Source Code Pro", sans-serif;
 
     outline: none;
-
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 

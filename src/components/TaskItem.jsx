@@ -41,7 +41,9 @@ function handleSave() {
                         onKeyDown={handleKeyDown}   
                     /> 
                      ) : (
-                    <span onDoubleClick={() => setIsEditing(true)}>
+                    <span 
+                        className={task.completed ? "completed" : ""}
+                        onDoubleClick={() => setIsEditing(true)}>
                         {task.text}
                     </span> 
                 )}
