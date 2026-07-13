@@ -7,6 +7,7 @@ import Header from "./components/Header.jsx";
 import useTasks from "./hooks/useTasks";
 import ProgressBar from "./components/ProgressBar.jsx";
 import "./App.css"
+import EmptyState from "./components/EmptyState.jsx";
 
 export default function App() {
 
@@ -37,6 +38,10 @@ export default function App() {
 
       <TaskForm onAdd={addTask} />
 
+      {(tasks.length === 0) ? (
+        <EmptyState/>
+      ) :
+      <>
       <TaskList 
           tasks={visibleTasks} 
           onDelete={deleteTask} 
@@ -51,6 +56,7 @@ export default function App() {
         tasks={tasks}
         progress={progress}
         completedTasks={completedTasks}/>
-    </div>
-  );
+      </>
+    }</div>
+);
 }
